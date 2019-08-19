@@ -1,9 +1,9 @@
 const logueo = document.getElementById('logueo');
-const registro = document.getElementById('registro'); 
-const registrarte= document.getElementById('registrarte');
+const registro = document.getElementById('registro');
+const registrarte = document.getElementById('registrarte');
 const errorRegistro = document.getElementById('error-registro');
 const inicio = document.getElementById('inicio');
-const bienvenida =  document.getElementById('bienvenida');
+const bienvenida = document.getElementById('bienvenida');
 // Este es el punto de entrada de tu aplicacion
 // import { myFunction } from './lib/index.js';
 
@@ -14,7 +14,7 @@ const ingresar = document.getElementById('ingresar');
 registrar.addEventListener('click', () => {
     logueo.classList.add('hide');
     inicio.classList.add('hide');
-    registro.classList.remove('hide'); 
+    registro.classList.remove('hide');
 });
 
 const validarEmail = (email) => {
@@ -36,16 +36,16 @@ registrarte.addEventListener('click', (e) => {
     // console.log(localStorage.getItem('nuevaContrasena'));
 
     if (validarEmail(newEmail) && newPassword.length >= 8) {
-         // guardo en locaLStorage Set
+        // guardo en locaLStorage Set
         localStorage.setItem('nombre', name);
         localStorage.setItem('nuevoCorreo', newEmail);
         localStorage.setItem('nuevaContrasena', newPassword);
-        alert('Tu registro a sido exitoso');
+        alert('Tu registro ha sido exitoso');
         registro.classList.add('hide');
         inicio.classList.add('hide');
         logueo.classList.remove('hide');
 
-    } else{
+    } else {
         errorRegistro.innerHTML = '• Debes ingresar un correo electrónico válido <br> • La contraseña debe tener más de 8 carácteres'
     }
 })
@@ -68,11 +68,9 @@ ingresar.addEventListener('click', () => {
     } else {
         alert('correo o contraseña incorrectos')
     }
-    
-    
-    
+
+
+
 
 
 });
-
-
