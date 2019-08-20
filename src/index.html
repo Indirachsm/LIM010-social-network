@@ -10,25 +10,26 @@
 <body>
   <main>
     <!-- Pantalla de Logueo -->
-      <section id="logueo">
+      <section id="logueo" class="contenedor flex">
+          <img class="logo" src="./lib/imagenes/logo-principal.jpeg" >
           <form class="formulario">
-            <input class="caja" id="email" placeholder="ejemplo@hotmail.com" type="text">
-            <input class="caja" id="password" placeholder="Contraseña" type="password">
+            <input class="inputs flex" id="email" placeholder="ejemplo@hotmail.com" type="text">
+            <input class="inputs flex" id="password" placeholder="Contraseña" type="password">
           </form>
-            <div>
-              <button type="submit" id="ingresar">INGRESA</button>
+            <div id="botones-logueo" class="recuadro flex">
+              <button class= "buttons" type="submit" id="ingresar">INGRESA</button>
               <p>¿No tienes una cuenta?</p>
-              <button type="submit" id="registrar">REGISTRATE</button>
+              <button class= "buttons" type="submit" id="registrar">REGISTRATE</button>
               <p id="error"></p> 
             </div>
-    <!-- Pantalla de registro -->
-      </section>   
-      <section id= "registro" class="hide">
+      </section>
+      <!-- Pantalla de registro -->
+      <section id= "registro" class="hide flex registro">
         <form class="formulario">
-          <input class="caja" id= "name" placeholder="Nombre" type="text">
-          <input class="caja" id= "new-email" placeholder="ejemplo@hotmail.com" type="email">
-          <input class="caja" id="new-password" placeholder="Contraseña nueva" type="password">
-          <button type="submit" id="registrarte">REGISTRAR</button>
+          <input class="inputs flex" id= "name" placeholder="Nombre" type="text">
+          <input class="inputs flex" id= "new-email" placeholder="ejemplo@hotmail.com" type="email">
+          <input class="inputs flex" id="new-password" placeholder="Contraseña nueva" type="password">
+          <button class="buttons" type="submit" id="registrarte">REGISTRAR</button>
           <p id = "error-registro" > </p>
         </form>
       </section> 
