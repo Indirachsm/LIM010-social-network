@@ -49,15 +49,7 @@ registrarte.addEventListener('click', (e) => {
     }
 })
 
-<<<<<<< HEAD
-const validarDatos = (email, password) => {
-    return JSON.parse(localStorage.getItem('users')).filter(users => email === usersLocalStorage && password === usersLocalStorage)
-}
-
-
-=======
 // Evento para loguearse
->>>>>>> 3f3a088ac1544e1ecbce8c20ebee7cbe1763cb2e
 ingresar.addEventListener('click', () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -66,33 +58,22 @@ ingresar.addEventListener('click', () => {
     console.log(email)
     console.log(password);
 
-<<<<<<< HEAD
-    // for (let i = 0; i < localStorage.length; i++) {
-    //     if (usersLocalStorage[i].emailUser === email && usersLocalStorage[i].passwordUser === password) {
-    //         alert('Bienvenido');
-    //         inicio.classList.remove('hide');
-    //         logueo.classList.add('hide');
-    //         bienvenida.innerHTML = usersLocalStorage[i].nameUser;
-    //     } else {
-    //         alert('correo o contraseña incorrectas');
-=======
     for (let i = 0; i < localStorage.length; i++) {
         if (usersLocalStorage[i].emailUser === email && usersLocalStorage[i].passwordUser === password) {
             alert('Bienvenido');
-        inicio.classList.remove('hide');
-        logueo.classList.add('hide');
-        bienvenida.innerHTML = usersLocalStorage[i].nameUser;
-        } else{
+            inicio.classList.remove('hide');
+            logueo.classList.add('hide');
+            bienvenida.innerHTML = usersLocalStorage[i].nameUser;
+        } else {
             alert('correo o contraseña incorrectas');
-        }      
-        
+        }
+
     }
->>>>>>> 3f3a088ac1544e1ecbce8c20ebee7cbe1763cb2e
 });
 // const validarDatos = () => {
 //     return JSON.parse(localStorage.getItem('users')).filter(users=>
 //         users.length < 8)
-         
+
 console.log(users);
 
 // }
