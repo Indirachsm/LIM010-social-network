@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
-  <title>Social Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>Social Network</title>
 </head>
+
 <body>
-  <main>
-    <!-- Pantalla de Logueo -->
-      <section id="logueo" class="contenedor flex">
-          <img class="logo" src="./lib/imagenes/logo-principal.jpeg" >
-          <form class="formulario">
-            <input class="inputs flex" id="email" placeholder="ejemplo@hotmail.com" type="text">
-            <input class="inputs flex" id="password" placeholder="Contraseña" type="password">
-            <div id="botones-logueo" class="recuadro flex">
-              <button class= "buttons bold" type="submit" id="ingresar">INGRESA</button>
-              <p>¿No tienes una cuenta? <a href="#" id="registrar" class="azul bold">Regístrate</a></p>
-              <p id="error"></p>
-              <p id= "registro-exitoso"></p>
-            </div>
-          </form>
-      </section>
-      <!-- Pantalla de registro -->
-      <section id= "registro" class="hide registro flex">
-        <form class="formulario">
-          <input class="inputs flex" id= "name" placeholder="Nombre" type="text">
-          <input class="inputs flex" id= "new-email" placeholder="ejemplo@hotmail.com" type="email">
-          <input class="inputs flex" id="new-password" placeholder="Contraseña nueva" type="password">
-        </form>
-          <button class="buttons bold" type="submit" id="registrarte">REGISTRAR</button>
-          <p class="error" id = "error-registro" > </p>  
-      </section> 
-    <!-- Pantalla de inicio -->
-    <section id= "inicio" class="hide">
-      <p id= "bienvenida" ></p>
-    </section>
-  </main>
-  <script type="module" src="main.js"></script>
+    <main>
+        <!-- Pantalla de Logueo -->
+        <section id="logueo" class="contenedor flex">
+            <img class="logo" src="./lib/imagenes/logo-principal.jpeg">
+            <form class="formulario">
+                <input class="inputs flex" id="email" placeholder="ejemplo@hotmail.com" type="text">
+                <input class="inputs flex" id="password" placeholder="Contraseña" type="password">
+                <div id="botones-logueo" class="recuadro flex">
+                    <button class="buttons bold" type="submit" id="ingresar">INGRESA</button>
+                    <p>¿No tienes una cuenta? <a href="#" id="registrar" class="azul bold">Regístrate</a></p>
+                    <p id="error"></p>
+                    <p id="registro-exitoso"></p>
+                </div>
+            </form>
+        </section>
+        <!-- Pantalla de registro -->
+        <section id="registro" class="hide registro flex">
+            <form class="formulario">
+                <input class="inputs flex" id="name" placeholder="Nombre" type="text">
+                <input class="inputs flex" id="new-email" placeholder="ejemplo@hotmail.com" type="email">
+                <input class="inputs flex" id="new-password" placeholder="Contraseña nueva" type="password">
+            </form>
+            <button class="buttons bold" type="submit" id="registrarte">REGISTRAR</button>
+            <p class="error" id="error-registro"> </p>
+        </section>
+        <!-- Pantalla de inicio -->
+        <section id="inicio" class="hide">
+            <p id="bienvenida"></p>
+            <textarea id="post-nuevo" cols="50" rows="10"></textarea>
+            <button class="buttons bold" type="submit" id="publicar-post">Publicar</button>
+            <div id="post-publicado"></div>
+        </section>
+    </main>
+    <script type="module" src="main.js"></script>
 </body>
+
 </html>
