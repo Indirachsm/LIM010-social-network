@@ -4,8 +4,10 @@ const registrarte = document.getElementById('registrarte');
 const errorRegistro = document.getElementById('error-registro');
 const inicio = document.getElementById('inicio');
 const bienvenida = document.getElementById('bienvenida');
-// Este es el punto de entrada de tu aplicacion
-// import { myFunction } from './lib/index.js';
+const modal = document.getElementById('modal')
+const cerrar = document.getElementById('cerrar')
+    // Este es el punto de entrada de tu aplicacion
+    // import { myFunction } from './lib/index.js';
 
 // myFunction();
 const registrar = document.getElementById('registrar');
@@ -43,10 +45,11 @@ registrarte.addEventListener('click', (e) => {
         newPassword.value = '';
         console.log(users);
         localStorage.setItem('users', JSON.stringify(users));
-        registroExisto.innerHTML = 'Tu registro a sido exitoso';
+        modal.classList.remove('hide');
         registro.classList.add('hide');
         inicio.classList.add('hide');
         logueo.classList.remove('hide');
+
 
     } else {
         errorRegistro.innerHTML = '• Debes ingresar un correo electrónico válido <br> • La contraseña debe tener más de 8 carácteres'
@@ -72,6 +75,10 @@ ingresar.addEventListener('click', () => {
         }
 
     }
+});
+
+document.getElementById('cerrar').addEventListener('click', () => {
+    document.getElementById('modal').classList.add('hide');
 });
 // const validarDatos = () => {
 //     return JSON.parse(localStorage.getItem('users')).filter(users=>
