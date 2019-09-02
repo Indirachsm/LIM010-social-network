@@ -16,7 +16,8 @@ const registroExisto = document.getElementById('registro-exitoso');
 
 //Pantalla de publicaciones
 const publicarPost = document.getElementById('publicar-post');
-const postPublicado = document.getElementById('post-publicado');
+let postPublicados = document.getElementById('post-publicados');
+let postGuardado = document.getElementById('post-guardado');
 
 //array para almacenar datos registrados.
 let users = [];
